@@ -350,78 +350,10 @@ footer {
     font-size:13px;
     color:#ccc;
 }
-    /* ===== MODAL ===== */
-.modal {
-    display:none;
-    position:fixed;
-    z-index:2000;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,0.7);
-    justify-content:center;
-    align-items:center;
-}
-
-.modal-content {
-    background:#ffffff;
-    color:#1a1a1a;
-    padding:40px;
-    border-radius:15px;
-    width:90%;
-    max-width:400px;
-    text-align:center;
-    box-shadow:0 15px 40px rgba(0,0,0,0.5);
-}
-
-.modal-content h2 {
-    margin-bottom:15px;
-}
-
-.modal-content input {
-    width:100%;
-    margin:10px 0;
-    padding:12px;
-    border-radius:6px;
-    border:1px solid #ccc;
-}
-
-.close-btn {
-    display:block;
-    margin-top:15px;
-    cursor:pointer;
-    color:#C40000;
-    font-weight:500;
-}
+    
 </style>
 </head>
-<!-- ===== ENTRY LEAD MODAL ===== -->
-<div id="leadModal" class="modal">
-    <div class="modal-content">
-        <h2>Book Your Site Visit</h2>
-        <p>Enter your details to get project updates & site visit assistance.</p>
-
-        <form action="https://formsubmit.co/your-email@gmail.com" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="tel" name="phone" placeholder="Phone Number" required>
-            <button type="submit" class="btn">Submit</button>
-        </form>
-
-        <span class="close-btn" onclick="closeModal()">Continue to Website</span>
-    </div>
-</div>
-    <script>
-window.onload = function() {
-    setTimeout(function() {
-        document.getElementById("leadModal").style.display = "flex";
-    }, 2000);
-};
-
-function closeModal() {
-    document.getElementById("leadModal").style.display = "none";
-}
-</script>
+    
 <body>
 <div class="side-profile">
 
@@ -620,6 +552,7 @@ setInterval(()=>{
 </body>
 
 </html>
+
 
 
 
