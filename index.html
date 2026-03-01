@@ -156,28 +156,37 @@ header {
     margin-bottom:20px;
 }
 
-<section class="section" id="video">
-<h2>Project Walkthrough Videos</h2>
+/* ===== VIDEO CARDS ===== */
+.video-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
 
-<div class="video-grid">
+.video-card {
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    color:#1a1a1a;
+    transition:0.3s;
+}
 
-    <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
-        <h3>Site Development View</h3>
-    </div>
+.video-card:hover {
+    transform:translateY(-5px);
+}
 
-    <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
-        <h3>Internal Roads & Layout</h3>
-    </div>
+.video-card iframe {
+    width:100%;
+    height:220px;
+    border-radius:10px;
+}
 
-    <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
-        <h3>Surrounding Area View</h3>
-    </div>
-
-</div>
-</section>
+.video-card h3 {
+    margin-top:15px;
+    font-size:16px;
+    text-align:center;
+}
 /* ===== FORM ===== */
 form {
     max-width:600px;
@@ -447,3 +456,4 @@ setInterval(()=>{
 </body>
 
 </html>
+
