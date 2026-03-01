@@ -8,43 +8,45 @@
 <style>
 
 /* ===== GENERAL ===== */
-body{
+body {
     margin:0;
-    font-family:'Segoe UI',Arial,sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     background:#0f1f3d;
     color:#ffffff;
 }
 
-h1,h2,h3{margin:0;}
+h1,h2,h3 {
+    margin:0;
+}
 
-.section{
+.section {
     padding:80px 10%;
 }
 
-.section:nth-child(even){
+.section:nth-child(even) {
     background:#102a43;
 }
 
-h2{
+h2 {
     text-align:center;
     margin-bottom:40px;
     font-size:32px;
 }
 
 /* ===== HERO ===== */
-header{
+header {
     position:relative;
     height:100vh;
     overflow:hidden;
 }
 
-.hero-slider{
+.hero-slider {
     position:absolute;
     width:100%;
     height:100%;
 }
 
-.hero-slide{
+.hero-slide {
     position:absolute;
     width:100%;
     height:100%;
@@ -54,12 +56,12 @@ header{
     transform:scale(1.08);
 }
 
-.hero-slide.active{
+.hero-slide.active {
     opacity:1;
     transform:scale(1);
 }
 
-.hero-overlay{
+.hero-overlay {
     position:absolute;
     width:100%;
     height:100%;
@@ -67,7 +69,7 @@ header{
     z-index:1;
 }
 
-.hero-content{
+.hero-content {
     position:relative;
     z-index:2;
     height:100%;
@@ -79,21 +81,30 @@ header{
     padding:0 20px;
 }
 
-.hero-content h1{
+.hero-content h1 {
     font-size:60px;
     letter-spacing:2px;
 }
 
-.brand-red{
+.brand-red {
     color:#C40000;
     font-weight:bold;
 }
 
-.hero-buttons{
+.hero-content h3 {
+    margin-top:15px;
+    font-weight:400;
+}
+
+.hero-content p {
+    margin-top:10px;
+}
+
+.hero-buttons {
     margin-top:30px;
 }
 
-.btn{
+.btn {
     display:inline-block;
     padding:14px 28px;
     margin:10px;
@@ -105,81 +116,79 @@ header{
     transition:0.3s;
 }
 
-.btn:hover{
+.btn:hover {
     background:#8e0000;
 }
 
 /* ===== GRID CARDS ===== */
-.grid{
+.grid {
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:25px;
 }
 
-.card{
+.card {
     background:white;
     color:#1a1a1a;
     padding:25px;
     border-radius:12px;
     box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    transition:0.3s;
 }
 
-/* ===== LOCATION IMAGE CARDS ===== */
-.location-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+.card:hover {
+    transform:translateY(-5px);
 }
 
-.location-card{
-    position:relative;
-    overflow:hidden;
+/* ===== MANAGER ===== */
+.manager img {
+    width:200px;
+    border-radius:50%;
+    display:block;
+    margin:0 auto 20px auto;
+    box-shadow:0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* ===== GALLERY ===== */
+.gallery img {
+    width:100%;
     border-radius:12px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
-}
-
-.location-card img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
-    transition:0.5s;
-}
-
-.location-card:hover img{
-    transform:scale(1.1);
-}
-
-.location-info{
-    position:absolute;
-    bottom:0;
-    width:100%;
-    padding:20px;
-    background:linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2));
+    margin-bottom:20px;
 }
 
 /* ===== VIDEO CARDS ===== */
-.video-grid{
+.video-grid {
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:30px;
 }
 
-.video-card{
+.video-card {
     background:white;
     padding:15px;
     border-radius:15px;
     box-shadow:0 10px 30px rgba(0,0,0,0.4);
     color:#1a1a1a;
+    transition:0.3s;
 }
 
-.video-card iframe{
+.video-card:hover {
+    transform:translateY(-5px);
+}
+
+.video-card iframe {
     width:100%;
     height:220px;
     border-radius:10px;
 }
 
-/* ===== LAYOUT CARD ===== */
-.layout-card{
+.video-card h3 {
+    margin-top:15px;
+    font-size:16px;
+    text-align:center;
+}
+   /* ===== UPDATED LAYOUT CARD ===== */
+.layout-card {
     background:white;
     color:#1a1a1a;
     border-radius:15px;
@@ -187,42 +196,60 @@ header{
     box-shadow:0 10px 30px rgba(0,0,0,0.4);
     display:grid;
     grid-template-columns:1.2fr 1fr;
+    gap:0;
 }
 
-.layout-image{
+.layout-image {
     padding:20px;
 }
 
-.layout-image img{
+.layout-image img {
     width:100%;
-    height:350px;
-    object-fit:contain;
+    height:350px;   /* reduced size */
+    object-fit:contain; /* ensures full layout visible */
     border-radius:10px;
     background:#f5f5f5;
 }
 
-.layout-info{
+.layout-info {
     padding:40px;
     display:flex;
     flex-direction:column;
     justify-content:center;
 }
 
-.brochure-btn-wrapper{
-    margin-top:20px;
-    display:flex;
-    justify-content:flex-end;
+.layout-info h3 {
+    margin-bottom:15px;
 }
 
+.brochure-btn-wrapper {
+    margin-top:20px;
+    display:flex;
+    justify-content:flex-end;   /* button moved to right */
+}
+
+@media(max-width:900px){
+    .layout-card{
+        grid-template-columns:1fr;
+    }
+
+    .layout-image img{
+        height:auto;
+    }
+
+    .brochure-btn-wrapper{
+        justify-content:center;
+    }
+}
 /* ===== FORM ===== */
-form{
+form {
     max-width:600px;
-    margin:auto;
+    margin:0 auto;
     display:flex;
     flex-direction:column;
 }
 
-input,select,textarea{
+input, select, textarea {
     margin:12px 0;
     padding:14px;
     font-size:16px;
@@ -230,15 +257,58 @@ input,select,textarea{
     border:none;
 }
 
+button {
+    cursor:pointer;
+}
+/* ===== LOCATION IMAGE CARDS ===== */
+.location-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.location-card {
+    position:relative;
+    overflow:hidden;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.location-card img {
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.location-card:hover img {
+    transform:scale(1.1);
+}
+
+.location-info {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:20px;
+    background:linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2));
+    color:white;
+}
+
+.location-info h3 {
+    margin:0;
+    font-size:18px;
+}
+
 /* ===== FOOTER ===== */
-footer{
+footer {
     background:#081a33;
+    color:white;
     padding:60px 10%;
     text-align:center;
 }
 
 /* ===== WHATSAPP FLOAT ===== */
-.whatsapp-float{
+.whatsapp-float {
     position:fixed;
     bottom:25px;
     right:25px;
@@ -246,11 +316,12 @@ footer{
     color:white;
     padding:18px;
     border-radius:50%;
+    font-weight:bold;
     text-decoration:none;
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
-
-/* ===== SIDE PROFILE ===== */
-.side-profile{
+/* ===== SIDE PROFILE BOTTOM LEFT ===== */
+.side-profile {
     position:fixed;
     bottom:30px;
     left:30px;
@@ -263,138 +334,294 @@ footer{
     z-index:999;
 }
 
-.side-profile img{
+.side-profile img {
     width:100px;
     border-radius:50%;
     margin-bottom:12px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.5);
 }
 
-@media(max-width:900px){
-    .layout-card{grid-template-columns:1fr;}
-    .layout-image img{height:auto;}
-    .side-profile{
-        position:relative;
-        margin:30px auto;
-        left:auto;
-        bottom:auto;
-    }
+.side-profile h3 {
+    margin:8px 0 4px 0;
+    font-size:16px;
 }
 
+.side-profile p {
+    font-size:13px;
+    color:#ccc;
+}
+    /* ===== MODAL ===== */
+.modal {
+    display:none;
+    position:fixed;
+    z-index:2000;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-content {
+    background:#ffffff;
+    color:#1a1a1a;
+    padding:40px;
+    border-radius:15px;
+    width:90%;
+    max-width:400px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,0.5);
+}
+
+.modal-content h2 {
+    margin-bottom:15px;
+}
+
+.modal-content input {
+    width:100%;
+    margin:10px 0;
+    padding:12px;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+
+.close-btn {
+    display:block;
+    margin-top:15px;
+    cursor:pointer;
+    color:#C40000;
+    font-weight:500;
+}
 </style>
 </head>
+<!-- ===== ENTRY LEAD MODAL ===== -->
+<div id="leadModal" class="modal">
+    <div class="modal-content">
+        <h2>Book Your Site Visit</h2>
+        <p>Enter your details to get project updates & site visit assistance.</p>
 
+        <form action="https://formsubmit.co/your-email@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+
+        <span class="close-btn" onclick="closeModal()">Continue to Website</span>
+    </div>
+</div>
+    <script>
+window.onload = function() {
+    setTimeout(function() {
+        document.getElementById("leadModal").style.display = "flex";
+    }, 2000);
+};
+
+function closeModal() {
+    document.getElementById("leadModal").style.display = "none";
+}
+</script>
 <body>
-
 <div class="side-profile">
-    <img src="images/manager.jpg">
+
+    <img src="images/manager.jpg" alt="Balakrishna">
+
     <h3>Anupothula Balakrishna</h3>
     <p>Authorized Marketing Partner</p>
-</div>
 
+    
+
+</div>
+<!-- ===== HERO ===== -->
 <header>
+
 <div class="hero-slider">
     <img src="images/site1.jpg" class="hero-slide active">
     <img src="images/site2.jpg" class="hero-slide">
 </div>
+
 <div class="hero-overlay"></div>
+
 <div class="hero-content">
     <h1><span class="brand-red">ALEKYA</span> Brundavan</h1>
     <h3>Kadthal – Phase V</h3>
     <p>DTCP Approved Layout | RERA No: PO2400009081</p>
+
     <div class="hero-buttons">
         <a class="btn" href="tel:9553142914">Call Now</a>
-        <a class="btn" href="https://wa.me/919553142914">WhatsApp</a>
+        <a class="btn" href="https://wa.me/919553142914?text=I%20am%20interested%20in%20Alekya%20Brundavan%20Plots" target="_blank">WhatsApp</a>
     </div>
 </div>
+
 </header>
 
+<!-- ===== ABOUT ===== -->
+
+<section class="section">
+<h2>About Alekya Projects</h2>
+<p style="text-align:center;">
+Developed by Alekya Projects under the leadership of K. Srinivas Reddy,
+delivering premium plotted developments with DTCP approvals and clear title documentation.
+</p>
+</section>
+
+<!-- ===== MANAGER ===== -->
+
+<section class="section manager">
+<h2>Authorized Marketing Partner</h2>
+<img src="images/manager.jpg" alt="Balakrishna">
+<p style="text-align:center;">
+<strong>Anupothula Balakrishna</strong><br>
+Site Visit Coordination | Plot Booking Assistance
+</p>
+</section>
+
+<!-- ===== HIGHLIGHTS ===== -->
 <section class="section">
 <h2>Project Highlights</h2>
 <div class="grid">
 <div class="card">DTCP Approved Layout</div>
-<div class="card">40' & 33' BT Roads</div>
-<div class="card">Underground Drainage</div>
+<div class="card">Clear Title & Spot Registration</div>
+<div class="card">40' & 33' Black Top Roads</div>
+<div class="card">Underground Drainage System</div>
 <div class="card">Avenue Plantation</div>
 <div class="card">24 Hours Security</div>
+<div class="card">Entrance Gate with Fencing</div>
 <div class="card">Jogging Track & Parks</div>
 </div>
 </section>
 
+<!-- ===== LOCATION ===== -->
 <section class="section">
 <h2>Location Advantages</h2>
+
 <div class="location-grid">
+
 <div class="location-card">
-<img src="images/highway.jpg">
-<div class="location-info">Near Srisailam Highway</div>
+    <img src="images/highway.jpg">
+    <div class="location-info">
+        <h3>Near Srisailam Highway (NH-765)</h3>
+        <p>Excellent connectivity to Hyderabad & Pharma City</p>
+    </div>
 </div>
+
 <div class="location-card">
-<img src="images/pyramid.jpg">
-<div class="location-info">5 Min – Maha Pyramid</div>
+    <img src="images/pyramid.jpg">
+    <div class="location-info">
+        <h3>5 Minutes – Maheshwara Maha Pyramid</h3>
+        <p>Spiritual landmark near project</p>
+    </div>
 </div>
+
 <div class="location-card">
-<img src="images/pharmacity.jpg">
-<div class="location-info">10 Min – Pharma City</div>
+    <img src="images/pharmacity.jpg">
+    <div class="location-info">
+        <h3>10 Minutes – Pharma City</h3>
+        <p>Future employment & growth hub</p>
+    </div>
 </div>
+
 <div class="location-card">
-<img src="images/airport.jpg">
-<div class="location-info">30 Min – Airport</div>
+    <img src="images/airport.jpg">
+    <div class="location-info">
+        <h3>30 Minutes – International Airport</h3>
+        <p>Strong investment appreciation potential</p>
+    </div>
 </div>
+
 </div>
 </section>
+<section class="section" id="video">
+<h2>Project Walkthrough Videos</h2>
 
-<section class="section">
-<h2>Project Videos</h2>
 <div class="video-grid">
-<div class="video-card">
-<iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
-</div>
-<div class="video-card">
-<iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
-</div>
-</div>
-</section>
 
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+        <h3>Site Development View</h3>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+        <h3>Internal Roads & Layout</h3>
+    </div>
+
+    <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" allowfullscreen></iframe>
+        <h3>Surrounding Area View</h3>
+    </div>
+
+</div>
 <section class="section">
 <h2>Master Layout & Brochure</h2>
+
 <div class="layout-card">
-<div class="layout-image">
-<img src="images/layout.jpg">
+
+    <div class="layout-image">
+        <img src="images/layout.jpg" alt="Master Layout">
+    </div>
+
+    <div class="layout-info">
+        <h3>Phase V – Master Layout Plan</h3>
+        <p>
+        DTCP Approved residential layout with clearly demarcated plots,
+        internal BT roads, park areas, and infrastructure planning.
+        </p>
+
+        <div class="brochure-btn-wrapper">
+            <a href="brochure.pdf" target="_blank" class="btn">
+                Download Brochure
+            </a>
+        </div>
+    </div>
+
 </div>
-<div class="layout-info">
-<h3>Phase V Layout Plan</h3>
-<p>Complete DTCP Approved layout with internal roads and park space.</p>
-<div class="brochure-btn-wrapper">
-<a href="brochure.pdf" class="btn" target="_blank">Download Brochure</a>
-</div>
-</div>
-</div>
+
 </section>
 
+<!-- ===== FORM ===== -->
 <section class="section">
 <h2>Book a Site Visit</h2>
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="tel" placeholder="Phone Number" required>
-<button class="btn">Submit</button>
+<form action="https://formsubmit.co/your-email@gmail.com" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="tel" name="phone" placeholder="Phone Number" required>
+<select name="budget">
+<option>Select Budget</option>
+<option>10 - 20 Lakhs</option>
+<option>20 - 40 Lakhs</option>
+<option>40 Lakhs +</option>
+</select>
+<textarea name="message" placeholder="Message"></textarea>
+<button class="btn" type="submit">Submit</button>
 </form>
 </section>
 
+<!-- ===== FOOTER ===== -->
 <footer>
-<h3>Contact Now</h3>
+<h3>Schedule Your Site Visit Today</h3>
 <p>📞 9553142914</p>
+<p>Alekya Brundavan @ Kadthal</p>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/919553142914">WA</a>
+<a class="whatsapp-float" href="https://wa.me/919553142914" target="_blank">WA</a>
 
 <script>
-let heroSlides=document.querySelectorAll('.hero-slide');
-let heroIndex=0;
+let heroSlides = document.querySelectorAll('.hero-slide');
+let heroIndex = 0;
+
 setInterval(()=>{
-heroSlides[heroIndex].classList.remove('active');
-heroIndex=(heroIndex+1)%heroSlides.length;
-heroSlides[heroIndex].classList.add('active');
+    heroSlides[heroIndex].classList.remove('active');
+    heroIndex = (heroIndex + 1) % heroSlides.length;
+    heroSlides[heroIndex].classList.add('active');
 },5000);
 </script>
 
 </body>
+
 </html>
+
+
+
+
+
