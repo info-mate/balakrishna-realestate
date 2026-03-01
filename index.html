@@ -154,17 +154,34 @@ margin:0 10px;color:white;text-decoration:none;
 /* SIDE PROFILE */
 .side-profile {
     position: fixed;
-    bottom: 30px;
-    left: 30px;
-    width: 240px;
+    bottom: 20px;
+    left: 20px;
+    width: 190px;              /* reduced */
     background: #081a33;
-    padding: 20px;
-    border-radius: 15px;
+    padding: 12px;             /* reduced */
+    border-radius: 12px;
     text-align: center;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-    z-index: 9999;  /* keeps it above everything */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    z-index: 9999;
 }
 
+.side-profile img {
+    width: 70px;               /* reduced */
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 8px;
+}
+
+.side-profile h3 {
+    font-size: 15px;
+    margin: 4px 0;
+}
+
+.side-profile p {
+    font-size: 12px;
+    opacity: 0.8;
+    margin: 0;
+}
 </style>
 </head>
 
@@ -300,6 +317,7 @@ heroSlides[heroIndex].classList.add('active');
 
 </body>
 </html>
+
 
 
 
