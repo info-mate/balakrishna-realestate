@@ -14,7 +14,9 @@ font-family:'Segoe UI',Arial,sans-serif;
 background:#0f1f3d;
 color:#ffffff;
 }
-
+body {
+    padding-left: 300px;
+}
 .section{padding:80px 10%;}
 .section:nth-child(even){background:#102a43;}
 h2{text-align:center;margin-bottom:40px;font-size:30px;}
@@ -152,17 +154,17 @@ margin:0 10px;color:white;text-decoration:none;
 
 
 /* SIDE PROFILE */
-.side-profile{
-position:fixed;bottom:30px;left:30px;
-width:240px;background:#081a33;
-padding:20px;border-radius:15px;
-text-align:center;
-}
-.side-profile img{width:100px;border-radius:50%;}
-
-@media(max-width:900px){
-.layout-card{grid-template-columns:1fr;}
-.side-profile{position:relative;margin:30px auto;}
+.side-profile {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    width: 240px;
+    background: #081a33;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    z-index: 9999;  /* keeps it above everything */
 }
 
 </style>
@@ -300,6 +302,7 @@ heroSlides[heroIndex].classList.add('active');
 
 </body>
 </html>
+
 
 
 
