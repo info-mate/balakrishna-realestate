@@ -152,39 +152,37 @@ margin:0 10px;color:white;text-decoration:none;
 
 
 /* SIDE PROFILE */
-.side-profile {
-    position: fixed;
-    bottom: 25px;
-    left: 25px;
-    width: 220px;                /* Balanced width */
-    background: #081a33;
-    padding: 16px;               /* Moderate padding */
-    border-radius: 14px;
-    text-align: center;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.45);
-    z-index: 9999;
-    transition: 0.3s ease;
+.side-profile{
+position:fixed;
+bottom:30px;
+left:30px;
+width:240px;
+background:#081a33;
+padding:20px;
+border-radius:15px;
+box-shadow:0 15px 35px rgba(0,0,0,0.4);
+text-align:center;
+z-index:999;
 }
 
-.side-profile img {
-    width: 85px;                 /* Balanced image size */
-    height: 85px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    object-fit: cover;
+.side-profile img{
+width:100px;
+border-radius:50%;
+margin-bottom:12px;
 }
 
-.side-profile h3 {
-    font-size: 16px;
-    margin: 6px 0 4px 0;
-    font-weight: 600;
+@media(max-width:900px){
+.layout-card{grid-template-columns:1fr;}
+.layout-image img{height:auto;}
+.brochure-btn-wrapper{justify-content:center;}
+.side-profile{
+position:relative;
+margin:30px auto;
+left:auto;
+bottom:auto;
+}
 }
 
-.side-profile p {
-    font-size: 13px;
-    opacity: 0.85;
-    margin: 0;
-}
 </style>
 </head>
 
@@ -320,6 +318,7 @@ heroSlides[heroIndex].classList.add('active');
 
 </body>
 </html>
+
 
 
 
