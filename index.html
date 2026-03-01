@@ -20,6 +20,41 @@ color:#ffffff;
 .section:nth-child(even){background:#102a43;}
 h2{text-align:center;margin-bottom:40px;font-size:30px;}
 
+.btn {
+display:inline-flex;
+align-items:center;
+gap:8px;
+padding:14px 28px;
+margin:10px;
+border-radius:6px;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+color:white;
+}
+
+/* Call Button */
+.call-btn {
+background:#1e3a8a;
+}
+
+.call-btn:hover {
+background:#162c6b;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+background:#25D366;
+}
+
+.whatsapp-btn:hover {
+background:#1ebe5d;
+}
+
+.btn i {
+font-size:16px;
+}
+    
 /* HERO */
 header{position:relative;height:100vh;overflow:hidden;}
 .hero-slider,.hero-slide{position:absolute;width:100%;height:100%;}
@@ -233,8 +268,13 @@ bottom:auto;
 <h3>Kadthal – Phase I–V</h3>
 <p>DTCP Approved Layout |FCDA FuterCity Included | RERA No: PO2400009081</p>
 <div class="hero-buttons">
-<a class="btn" href="tel:9553142914">Call Now</a>
-<a class="btn" href="https://wa.me/919553142914">WhatsApp</a>
+<a class="btn call-btn" href="tel:9553142914">
+    <i class="fas fa-phone"></i> Call Now
+</a>
+
+<a class="btn whatsapp-btn" href="https://wa.me/919553142914" target="_blank">
+    <i class="fab fa-whatsapp"></i> WhatsApp
+</a>
 </div>
 </div>
 </header>
@@ -356,6 +396,7 @@ heroSlides[heroIndex].classList.add('active');
 
 </body>
 </html>
+
 
 
 
