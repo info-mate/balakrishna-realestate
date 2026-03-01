@@ -154,32 +154,35 @@ margin:0 10px;color:white;text-decoration:none;
 /* SIDE PROFILE */
 .side-profile {
     position: fixed;
-    bottom: 20px;
-    left: 20px;
-    width: 190px;              /* reduced */
+    bottom: 25px;
+    left: 25px;
+    width: 220px;                /* Balanced width */
     background: #081a33;
-    padding: 12px;             /* reduced */
-    border-radius: 12px;
+    padding: 16px;               /* Moderate padding */
+    border-radius: 14px;
     text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.45);
     z-index: 9999;
+    transition: 0.3s ease;
 }
 
 .side-profile img {
-    width: 70px;               /* reduced */
-    height: 70px;
+    width: 85px;                 /* Balanced image size */
+    height: 85px;
     border-radius: 50%;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    object-fit: cover;
 }
 
 .side-profile h3 {
-    font-size: 15px;
-    margin: 4px 0;
+    font-size: 16px;
+    margin: 6px 0 4px 0;
+    font-weight: 600;
 }
 
 .side-profile p {
-    font-size: 12px;
-    opacity: 0.8;
+    font-size: 13px;
+    opacity: 0.85;
     margin: 0;
 }
 </style>
@@ -317,6 +320,7 @@ heroSlides[heroIndex].classList.add('active');
 
 </body>
 </html>
+
 
 
 
