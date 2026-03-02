@@ -1,42 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Alekya Brundavan @ Kadthal | Open Plots</title>
 
+<meta name="description" content="Alekya Brundavan @ Kadthal – DTCP Approved 280 Acres Mega Township. Plot sizes 147–352 Sq.Yards. Located near Srisailam Highway. Book site visit now.">
+<meta name="keywords" content="Kadthal Open Plots, DTCP Plots Kadthal, Srisailam Highway Plots, 280 Acres Layout, Alekya Brundavan">
+<meta name="author" content="Authorized Marketing Manager">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Alekya Brundavan @ Kadthal | Open Plots">
+<meta property="og:description" content="DTCP Approved Layout | 280 Acres Mega Township | 147–352 Sq.Yards">
+<meta property="og:image" content="images/site1.jpg">
+<meta property="og:type" content="website">
+
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+
 <style>
-.overview-grid {
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
 
-.overview-card {
-background:white;
-color:#1a1a1a;
-padding:30px;
-border-radius:15px;
-box-shadow:0 12px 30px rgba(0,0,0,0.3);
-text-align:center;
-transition:0.3s;
-}
-
-.overview-card:hover {
-transform:translateY(-6px);
-}
-
-.overview-card h3 {
-margin-bottom:10px;
-font-size:18px;
-color:#1e3a8a;
-}
-
-.overview-card p {
-font-size:17px;
-font-weight:600;
-}
 /* GENERAL */
 body{
 margin:0;
@@ -44,12 +31,11 @@ font-family:'Segoe UI',Arial,sans-serif;
 background:#0f1f3d;
 color:#ffffff;
 }
-
 .section{padding:80px 10%;}
 .section:nth-child(even){background:#102a43;}
 h2{text-align:center;margin-bottom:40px;font-size:30px;}
 
-.btn {
+.btn{
 display:inline-flex;
 align-items:center;
 gap:8px;
@@ -62,32 +48,15 @@ transition:0.3s;
 color:white;
 }
 
-/* Call Button - Professional Green */
-.green-call {
-background:#15803d;   /* deep green */
-}
+.green-call{background:#15803d;}
+.green-call:hover{background:#166534;}
 
-.green-call:hover {
-background:#166534;
-}
+.green-wa{background:#25D366;}
+.green-wa:hover{background:#1ebe5d;}
 
-/* WhatsApp Button - Official Green */
-.green-wa {
-background:#25D366;
-}
-
-.green-wa:hover {
-background:#1ebe5d;
-}
-
-.btn i {
-font-size:16px;
-}
-    
 /* HERO */
 header{position:relative;height:100vh;overflow:hidden;}
-.hero-slider,.hero-slide{position:absolute;width:100%;height:100%;}
-.hero-slide{object-fit:cover;opacity:0;transition:1s;transform:scale(1.08);}
+.hero-slide{position:absolute;width:100%;height:100%;object-fit:cover;opacity:0;transition:1s;transform:scale(1.08);}
 .hero-slide.active{opacity:1;transform:scale(1);}
 .hero-overlay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.6);}
 .hero-content{
@@ -97,14 +66,13 @@ align-items:center;text-align:center;padding:20px;
 }
 .hero-content h1{font-size:55px;}
 .hero-buttons{margin-top:30px;}
-.btn{
-display:inline-block;padding:14px 28px;margin:10px;
-background:#1e3a8a;color:white;text-decoration:none;
-border-radius:6px;transition:0.3s;
-}
-.btn:hover{background:#162c6b;}
 
-/* HIGHLIGHTS */
+@media(max-width:600px){
+.hero-content h1{font-size:32px;}
+.hero-content h3{font-size:18px;}
+}
+
+/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -116,53 +84,40 @@ padding:25px;border-radius:12px;
 box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 
+/* OVERVIEW */
+.overview-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+.overview-card{
+background:white;color:#1a1a1a;
+padding:30px;border-radius:15px;
+box-shadow:0 12px 30px rgba(0,0,0,0.3);
+text-align:center;transition:0.3s;
+}
+.overview-card:hover{transform:translateY(-6px);}
+.overview-card h3{color:#1e3a8a;}
+
 /* LOCATION */
 .location-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:30px;
 }
-
 .location-card{
-position:relative;
-overflow:hidden;
-border-radius:15px;
-box-shadow:0 15px 35px rgba(0,0,0,0.4);
-transition:0.4s;
+position:relative;overflow:hidden;border-radius:15px;
+box-shadow:0 15px 35px rgba(0,0,0,0.4);transition:0.4s;
 }
-
-.location-card:hover{
-transform:translateY(-8px);
-}
-
+.location-card:hover{transform:translateY(-8px);}
 .location-card img{
-width:100%;
-height:260px;
-object-fit:cover;
-transition:0.5s;
+width:100%;height:260px;object-fit:cover;transition:0.5s;
 }
-
-.location-card:hover img{
-transform:scale(1.1);
-}
-
+.location-card:hover img{transform:scale(1.1);}
 .location-info{
-position:absolute;
-bottom:0;
-width:100%;
-padding:20px;
-background:linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.3));
+position:absolute;bottom:0;width:100%;
+padding:20px;background:linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.3));
 color:white;
-}
-
-.location-info h3{
-margin-bottom:5px;
-font-size:18px;
-}
-
-.location-info p{
-font-size:14px;
-opacity:0.9;
 }
 
 /* VIDEO */
@@ -178,22 +133,6 @@ box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 .video-card iframe{width:100%;height:220px;border-radius:10px;}
 
-/* LAYOUT */
-.layout-card{
-background:white;color:#1a1a1a;
-border-radius:15px;
-display:grid;
-grid-template-columns:1.2fr 1fr;
-gap:40px;align-items:center;
-}
-.layout-image{padding:20px;}
-.layout-image img{
-width:100%;height:350px;
-object-fit:contain;border-radius:10px;
-background:#f5f5f5;
-}
-.layout-info{padding:40px;}
-
 /* FORM */
 form{max-width:600px;margin:auto;display:flex;flex-direction:column;}
 input{
@@ -203,109 +142,48 @@ font-size:16px;border-radius:6px;border:none;
 button{
 padding:14px;background:#1e3a8a;
 color:white;border:none;border-radius:6px;
+cursor:pointer;
 }
+button:hover{background:#162c6b;}
 
 /* FOOTER */
 footer{
 background:#081a33;padding:60px 10%;
 text-align:center;
 }
-.social a{
-margin:0 10px;color:white;text-decoration:none;
-}
-.social-icons {
-display:flex;
-gap:15px;
-justify-content:center;
-margin-top:15px;
-}
 
-.social-icons a {
-width:45px;
-height:45px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-color:white;
-font-size:20px;
-transition:0.3s;
-text-decoration:none;
+.social-icons{
+display:flex;gap:15px;justify-content:center;margin-top:15px;
 }
-
-/* Brand Colors */
-.wa-icon { background:#25D366; }
-.insta-icon { background:#E1306C; }
-.fb-icon { background:#1877F2; }
-
-.social-icons a:hover {
-transform:scale(1.1);
+.social-icons a{
+width:45px;height:45px;display:flex;
+align-items:center;justify-content:center;
+border-radius:50%;color:white;font-size:20px;
+transition:0.3s;text-decoration:none;
 }
-
-
-/* SIDE PROFILE */
-.side-profile{
-position:fixed;
-bottom:30px;
-left:30px;
-width:240px;
-background:#081a33;
-padding:20px;
-border-radius:15px;
-box-shadow:0 15px 35px rgba(0,0,0,0.4);
-text-align:center;
-z-index:999;
-}
-
-.side-profile img{
-width:100px;
-border-radius:50%;
-margin-bottom:12px;
-}
-
-@media(max-width:900px){
-.layout-card{grid-template-columns:1fr;}
-.layout-image img{height:auto;}
-.brochure-btn-wrapper{justify-content:center;}
-.side-profile{
-position:relative;
-margin:30px auto;
-left:auto;
-bottom:auto;
-}
-}
+.wa-icon{background:#25D366;}
+.insta-icon{background:#E1306C;}
+.fb-icon{background:#1877F2;}
+.social-icons a:hover{transform:scale(1.1);}
 
 </style>
 </head>
 
 <body>
 
-<div class="side-profile">
-<img src="images/manager.jpg">
-<h3>Anupothula Balakrishna</h3>
-<p>Authorized Marketing Manager</p>
-</div>
-
 <header>
-<div class="hero-slider">
-<img src="images/site1.jpg" class="hero-slide active">
-<img src="images/site2.jpg" class="hero-slide">
-</div>
+<img src="images/site1.jpg" alt="Alekya Brundavan Layout View" class="hero-slide active" loading="lazy">
+<img src="images/site2.jpg" alt="Alekya Brundavan Open Plots View" class="hero-slide" loading="lazy">
 <div class="hero-overlay"></div>
 <div class="hero-content">
 <h1>Alekya Brundavan</h1>
 <h3>Kadthal – Phase I–V</h3>
-    <h3>Location:Kadthal,Srisailam Highway</h3>
-<p>DTCP Approved Layout | FCDA FuterCity Included | RERA No: PO2400009081</p>
-    <p>Plot size:147 - 352 Sq.Yards | 280 acres Mega Township | Available at Attractive & Low Investment Price </p>
+<h3>Location: Kadthal, Srisailam Highway</h3>
+<p>DTCP Approved Layout | FCDA Future City Included | RERA No: PO2400009081</p>
+<p>Plot size: 147 - 352 Sq.Yards | 280 acres Mega Township | Available at Attractive & Low Investment Price</p>
 <div class="hero-buttons">
-<a class="btn green-call" href="tel:9553142914">
-    <i class="fas fa-phone"></i> Call Now
-</a>
-
-<a class="btn green-wa" href="https://wa.me/919553142914" target="_blank">
-    <i class="fab fa-whatsapp"></i> WhatsApp
-</a>
+<a class="btn green-call" href="tel:9553142914"><i class="fas fa-phone"></i> Call Now</a>
+<a class="btn green-wa" href="https://wa.me/919553142914" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
 </div>
 </div>
 </header>
@@ -321,182 +199,40 @@ bottom:auto;
 <div class="card">Jogging Track & Parks</div>
 </div>
 </section>
-    
-<section class="section">
-<h2>Project Overview</h2>
 
-<div class="overview-grid">
-
-    <div class="overview-card">
-        <h3>Plot Sizes</h3>
-        <p>147 – 352 Sq. Yards</p>
-    </div>
-
-    <div class="overview-card">
-        <h3>Total Project Area</h3>
-        <p>280 Acres Mega Township</p>
-    </div>
-
-    <div class="overview-card">
-        <h3>Pricing</h3>
-        <p>Available at Attractive & Low Investment Price</p>
-    </div>
-
-    
-
-</div>
-</section>
-<section class="section" id="location">
-<h2>Location Highlights</h2>
-
-<div class="location-grid">
-
-    <div class="location-card">
-        <img src="images/highway.jpg" alt="Srisailam Highway">
-        <div class="location-info">
-            <h3>Srisailam Highway</h3>
-            <p>2 Minutes Drive</p>
-        </div>
-    </div>
-
-    <div class="location-card">
-        <img src="images/airport.jpg" alt="Rajiv Gandhi Airport">
-        <div class="location-info">
-            <h3>Rajiv Gandhi International Airport</h3>
-            <p>30 Minutes Drive</p>
-        </div>
-    </div>
-
-    <div class="location-card">
-        <img src="images/maisiganditemple.jpg" alt="Maisigandi Temple">
-        <div class="location-info">
-            <h3>Maisigandi Temple</h3>
-            <p>Nearby Spiritual Landmark</p>
-        </div>
-    </div>
-
-    <div class="location-card">
-        <img src="images/tcs.jpg" alt="TCS Adibatla">
-        <div class="location-info">
-            <h3>TCS Adibatla</h3>
-            <p>Major IT Employment Hub</p>
-        </div>
-    </div>
-
-    <div class="location-card">
-        <img src="images/pyramid.jpg" alt="Maha Pyramid">
-        <div class="location-info">
-            <h3>Maha Pyramid</h3>
-            <p>International Meditation Center</p>
-        </div>
-    </div>
-
-    <div class="location-card">
-        <img src="images/pharmacity.jpg" alt="Pharma City">
-        <div class="location-info">
-            <h3>Pharma City</h3>
-            <p>Future Industrial Growth Zone</p>
-        </div>
-    </div>
-
-</div>
-</section>
-<section class="section">
-<h2>Project Walkthrough Videos</h2>
-
-<div class="video-grid">
-
-    <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1"
-        title="Site Development Video"
-        allowfullscreen></iframe>
-        <h3 style="margin-top:12px;text-align:center;">
-        Site Development Overview
-        </h3>
-    </div>
-
-    <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"
-        title="Layout Roads Video"
-        allowfullscreen></iframe>
-        <h3 style="margin-top:12px;text-align:center;">
-        Internal Roads & Layout
-        </h3>
-    </div>
-
-    <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3"
-        title="Surroundings Video"
-        allowfullscreen></iframe>
-        <h3 style="margin-top:12px;text-align:center;">
-        Surrounding Area View
-        </h3>
-    </div>
-
-</div>
-</section>
 <section class="section">
 <h2>Book a Site Visit</h2>
-
 <form action="https://formsubmit.co/sk88875@gmail.com" method="POST">
-
 <input type="text" name="Name" placeholder="Your Name" required>
 <input type="tel" name="Phone" placeholder="Phone Number" required>
 <input type="text" name="Location" placeholder="Your Location" required>
-
-<!-- Disable captcha -->
 <input type="hidden" name="_captcha" value="false">
-
-<!-- Redirect after submit -->
-<input type="hidden" name="_next" value="https://info-mate.github.io/balakrishna-realestate/">
-
-<button type="submit" class="btn">Submit</button>
-
+<input type="hidden" name="_subject" value="New Site Visit Inquiry - Alekya Brundavan">
+<button type="submit">Book Now</button>
 </form>
-
-<iframe name="hidden_iframe" style="display:none;"></iframe>
-
-<p id="success-msg" style="display:none;color:lightgreen;margin-top:10px;">
-✔ Thank you! Our team will contact you shortly.
-</p>
-
-<script>
-function showSuccess(){
-setTimeout(function(){
-document.getElementById("success-msg").style.display="block";
-},1000);
-}
-</script>
-
 </section>
 
 <footer>
 <h3>Contact</h3>
- <h3>Kadthal,Srisailam Highway</h3>   
-<p>
-    <i class="fas fa-phone"></i> Call 9553142914
-</p>
+<h3>Kadthal, Srisailam Highway</h3>
+<p><i class="fas fa-phone"></i> Call 9553142914</p>
+
 <div class="social-icons">
-
-<a href="https://wa.me/919553142914" target="_blank" class="wa-icon">
-<i class="fab fa-whatsapp"></i>
-</a>
-
-<a href="https://www.instagram.com/balu_3156?igsh=OHo3eno0Nno1dnph" target="_blank" class="insta-icon">
-<i class="fab fa-instagram"></i>
-</a>
-
-<a href="https://www.facebook.com/share/17KURxw2w9/" target="_blank" class="fb-icon">
-<i class="fab fa-facebook-f"></i>
-</a>
-
+<a href="https://wa.me/919553142914" target="_blank" class="wa-icon"><i class="fab fa-whatsapp"></i></a>
+<a href="https://www.instagram.com/balu_3156" target="_blank" class="insta-icon"><i class="fab fa-instagram"></i></a>
+<a href="https://www.facebook.com" target="_blank" class="fb-icon"><i class="fab fa-facebook-f"></i></a>
 </div>
+
 <p style="font-size:12px;opacity:0.7;">
 This website is maintained by the Authorized Marketing Manager for promotional purposes only.
 </p>
 </footer>
 
-
+<!-- Sticky Call Button -->
+<a href="tel:9553142914"
+style="position:fixed;right:20px;bottom:20px;background:#15803d;color:white;padding:14px 18px;border-radius:50px;text-decoration:none;z-index:999;">
+<i class="fas fa-phone"></i>
+</a>
 
 <script>
 let heroSlides=document.querySelectorAll('.hero-slide');
@@ -510,4 +246,3 @@ heroSlides[heroIndex].classList.add('active');
 
 </body>
 </html>
-
