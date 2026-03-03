@@ -3,60 +3,59 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alekya Brundavan @ Kadthal | Open Plots</title>
+<title>Alekya Brundavan @ Kadthal | 280 Acres Open Plots</title>
 
 <style>
 
-/* ===== GENERAL ===== */
+/* ===== GLOBAL ===== */
 body{
 margin:0;
-font-family:'Segoe UI',Arial,sans-serif;
-background:#0f1f3d;
+font-family:'Segoe UI',sans-serif;
+background:#0b1c2d;
 color:#ffffff;
 }
-
-h1,h2,h3{margin:0;}
 
 .section{
 padding:80px 10%;
 }
 
-.section:nth-child(even){
-background:#102a43;
+h1,h2,h3{
+margin:0;
 }
 
 h2{
 text-align:center;
 margin-bottom:40px;
-font-size:32px;
+font-size:34px;
+}
+
+.brand{
+color:#1e90ff;
+font-weight:bold;
+}
+
+/* ===== BUTTONS ===== */
+.btn{
+display:inline-block;
+padding:14px 30px;
+margin:10px;
+background:linear-gradient(45deg,#1e90ff,#0056b3);
+color:#fff;
+text-decoration:none;
+border-radius:6px;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+opacity:0.85;
 }
 
 /* ===== HERO ===== */
 header{
-position:relative;
 height:100vh;
-overflow:hidden;
-}
-
-.hero-slider{
-position:absolute;
-width:100%;
-height:100%;
-}
-
-.hero-slide{
-position:absolute;
-width:100%;
-height:100%;
-object-fit:cover;
-opacity:0;
-transition:opacity 1.2s ease-in-out, transform 6s ease-in-out;
-transform:scale(1.08);
-}
-
-.hero-slide.active{
-opacity:1;
-transform:scale(1);
+background:url("images/site3.jpg") center/cover no-repeat;
+position:relative;
 }
 
 .hero-overlay{
@@ -64,7 +63,6 @@ position:absolute;
 width:100%;
 height:100%;
 background:rgba(0,0,0,0.65);
-z-index:1;
 }
 
 .hero-content{
@@ -80,33 +78,13 @@ padding:0 20px;
 }
 
 .hero-content h1{
-font-size:60px;
+font-size:55px;
 letter-spacing:2px;
 }
 
-.brand-red{
-color:#C40000;
-font-weight:bold;
-}
-
-.hero-buttons{
-margin-top:30px;
-}
-
-.btn{
-display:inline-block;
-padding:14px 28px;
-margin:10px;
-background:#C40000;
-color:white;
-text-decoration:none;
-border-radius:6px;
-font-weight:500;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#8e0000;
+.hero-content p{
+margin-top:15px;
+font-size:18px;
 }
 
 /* ===== HIGHLIGHTS ===== */
@@ -117,14 +95,14 @@ gap:25px;
 }
 
 .card{
-background:white;
-color:#1a1a1a;
+background:#ffffff;
+color:#000;
 padding:25px;
 border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.3);
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
 }
 
-/* ===== LOCATION CARDS ===== */
+/* ===== LOCATION ===== */
 .location-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -133,137 +111,43 @@ gap:25px;
 
 .location-card{
 position:relative;
-overflow:hidden;
 border-radius:12px;
-box-shadow:0 10px 25px rgba(0,0,0,0.3);
+overflow:hidden;
 }
 
 .location-card img{
 width:100%;
 height:250px;
 object-fit:cover;
-transition:0.5s;
-}
-
-.location-card:hover img{
-transform:scale(1.1);
 }
 
 .location-info{
 position:absolute;
 bottom:0;
 width:100%;
-padding:20px;
-background:linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2));
+padding:15px;
+background:rgba(0,0,0,0.75);
 }
 
-/* ===== VIDEO CARDS ===== */
-.video-grid{
+/* ===== GALLERY ===== */
+.gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
+gap:20px;
 }
 
-.video-card{
-background:white;
-color:#1a1a1a;
-padding:15px;
-border-radius:15px;
-box-shadow:0 12px 30px rgba(0,0,0,0.4);
-}
-
-.video-card iframe{
+.gallery img{
 width:100%;
-height:220px;
+height:250px;
+object-fit:cover;
 border-radius:10px;
-}
-
-.video-card h3{
-margin-top:12px;
-text-align:center;
-font-size:16px;
-}
-
-/* ===== LAYOUT SECTION ===== */
-.layout-card{
-background:white;
-color:#1a1a1a;
-border-radius:15px;
-overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
-display:grid;
-grid-template-columns:1.2fr 1fr;
-gap:40px;
-align-items:center;
-}
-
-.layout-image{
-padding:20px;
-}
-
-.layout-image img{
-width:100%;
-height:350px;
-object-fit:contain;
-border-radius:10px;
-background:#f5f5f5;
-}
-
-.layout-info{
-padding:40px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-}
-
-.layout-info h3{
-margin-bottom:15px;
-}
-
-.layout-info p{
-margin-bottom:20px;
-line-height:1.6;
-}
-
-.brochure-btn-wrapper{
-margin-top:20px;
-display:flex;
-justify-content:flex-end;
-}
-
-/* ===== FORM ===== */
-form{
-max-width:600px;
-margin:auto;
-display:flex;
-flex-direction:column;
-}
-
-input,select,textarea{
-margin:12px 0;
-padding:14px;
-font-size:16px;
-border-radius:6px;
-border:none;
 }
 
 /* ===== FOOTER ===== */
 footer{
-background:#081a33;
-padding:60px 10%;
+background:#081422;
+padding:50px 10%;
 text-align:center;
-}
-
-/* ===== WHATSAPP FLOAT ===== */
-.whatsapp-float{
-position:fixed;
-bottom:25px;
-right:25px;
-background:#25D366;
-color:white;
-padding:18px;
-border-radius:50%;
-text-decoration:none;
 }
 
 /* ===== SIDE PROFILE ===== */
@@ -271,31 +155,29 @@ text-decoration:none;
 position:fixed;
 bottom:30px;
 left:30px;
-width:240px;
-background:#081a33;
+background:#081422;
 padding:20px;
 border-radius:15px;
-box-shadow:0 15px 35px rgba(0,0,0,0.4);
+width:230px;
 text-align:center;
-z-index:999;
 }
 
 .side-profile img{
-width:100px;
+width:90px;
 border-radius:50%;
-margin-bottom:12px;
+margin-bottom:10px;
 }
 
-@media(max-width:900px){
-.layout-card{grid-template-columns:1fr;}
-.layout-image img{height:auto;}
-.brochure-btn-wrapper{justify-content:center;}
-.side-profile{
-position:relative;
-margin:30px auto;
-left:auto;
-bottom:auto;
-}
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+background:#25D366;
+color:#fff;
+padding:18px;
+border-radius:50%;
+text-decoration:none;
+font-weight:bold;
 }
 
 </style>
@@ -308,169 +190,117 @@ bottom:auto;
 <img src="images/manager.jpg">
 <h3>Anupothula Balakrishna</h3>
 <p>Authorized Marketing Partner</p>
+<p>📞 9553142914</p>
+<p>📍 Kadthal, Srisailam Highway</p>
 </div>
 
 <!-- HERO -->
 <header>
-<div class="hero-slider">
-<img src="images/site1.jpg" class="hero-slide active">
-<img src="images/site2.jpg" class="hero-slide">
-</div>
 <div class="hero-overlay"></div>
 <div class="hero-content">
-<h1><span class="brand-red">ALEKYA</span> Brundavan</h1>
-<h3>Kadthal – Phase V</h3>
-<p>DTCP Approved Layout | RERA No: PO2400009081</p>
-<div class="hero-buttons">
+<h1><span class="brand">ALEKYA</span> Brundavan</h1>
+<h3>Phase I – V | 280 Acres Mega Layout</h3>
+<p>DTCP & FCDA Approved | RERA No: PO2400009081</p>
+<p>Plot Sizes: 147 – 352 Sq.Yards | Low Pricing</p>
+<div>
 <a class="btn" href="tel:9553142914">Call Now</a>
 <a class="btn" href="https://wa.me/919553142914">WhatsApp</a>
 </div>
 </div>
 </header>
 
-<!-- HIGHLIGHTS -->
+<!-- PROJECT HIGHLIGHTS -->
 <section class="section">
 <h2>Project Highlights</h2>
 <div class="grid">
-<div class="card">DTCP Approved Layout</div>
-<div class="card">40' & 33' BT Roads</div>
+<div class="card">DTCP & FCDA Approved Layout</div>
+<div class="card">280 Acres Gated Community</div>
+<div class="card">40' & 33' Black Top Roads</div>
 <div class="card">Underground Drainage</div>
 <div class="card">Avenue Plantation</div>
 <div class="card">24 Hours Security</div>
-<div class="card">Jogging Track & Parks</div>
+<div class="card">Clear Title</div>
+<div class="card">Low Pricing Investment Opportunity</div>
 </div>
 </section>
 
 <!-- LOCATION -->
 <section class="section">
-<h2>Location Advantages</h2>
+<h2>Location Highlights</h2>
 <div class="location-grid">
+
 <div class="location-card">
 <img src="images/highway.jpg">
-<div class="location-info">Near Srisailam Highway</div>
+<div class="location-info">Srisailam Highway Connectivity</div>
 </div>
+
+<div class="location-card">
+<img src="images/maisiganditemple.jpg">
+<div class="location-info">Near Maisigandi Temple</div>
+</div>
+
+<div class="location-card">
+<img src="images/tcs.jpg">
+<div class="location-info">Near TCS & IT Zone</div>
+</div>
+
+<div class="location-card">
+<img src="images/airport.jpg">
+<div class="location-info">30 Min – Hyderabad Airport</div>
+</div>
+
 <div class="location-card">
 <img src="images/pyramid.jpg">
 <div class="location-info">5 Min – Maha Pyramid</div>
 </div>
+
 <div class="location-card">
 <img src="images/pharmacity.jpg">
 <div class="location-info">10 Min – Pharma City</div>
 </div>
-<div class="location-card">
-<img src="images/airport.jpg">
-<div class="location-info">30 Min – Airport</div>
-</div>
+
 </div>
 </section>
 
-<!-- VIDEOS -->
+<!-- GALLERY -->
 <section class="section">
-<h2>Project Walkthrough Videos</h2>
-<div class="video-grid">
-<div class="video-card">
-<iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
-<h3>Site Development View</h3>
-</div>
-<div class="video-card">
-<iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
-<h3>Internal Roads & Layout</h3>
-</div>
-</div>
-</section>
-
-<!-- LAYOUT -->
-<section class="section">
-<h2>Master Layout & Brochure</h2>
-<div class="layout-card">
-<div class="layout-image">
+<h2>Project Gallery</h2>
+<div class="gallery">
+<img src="images/site1.jpg">
+<img src="images/site2.jpg">
+<img src="images/site3.jpg">
 <img src="images/layout.jpg">
-</div>
-<div class="layout-info">
-<h3>Phase V – Master Layout Plan</h3>
-<p>Complete DTCP Approved layout with internal roads and park space.</p>
-<div class="brochure-btn-wrapper">
-<a href="brochure.pdf" download class="btn">Download Brochure</a>
-</div>
-</div>
 </div>
 </section>
 
 <!-- CONTACT -->
 <section class="section">
 <h2>Book a Site Visit</h2>
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="tel" placeholder="Phone Number" required>
-<button class="btn">Submit</button>
-</form>
+<a class="btn" href="tel:9553142914">Schedule Visit</a>
 </section>
 
 <footer>
 
-<div class="footer-container">
+<h3><span class="brand">ALEKYA</span> Brundavan</h3>
+<p>Premium Open Plots at Kadthal, Srisailam Highway</p>
+<p>Phase I – V | 280 Acres | DTCP & FCDA Approved</p>
+<p>Plot Size: 147 – 352 Sq.Yards</p>
 
-    <!-- Column 1 -->
-    <div class="footer-col">
-        <h3><span class="brand-red">ALEKYA</span> Brundavan</h3>
-        <p>Premium DTCP Approved Open Plots at Kadthal – Phase V.</p>
-        <p><strong>RERA No:</strong> PO2400009081</p>
-    </div>
-   
-
-<!-- Column 2 -->
-<div class="footer-col">
-<h3>Marketing Partner</h3>
-<p>Anupothula Balakrishna</p>
-<p>Authorized Channel Partner</p>
+<p><strong>Marketing Partner:</strong> Anupothula Balakrishna</p>
 <p>📞 9553142914</p>
-<p>📍 Kadthal, R.R. District</p>
-</div>
 
-    <!-- Column 3 -->
-    <div class="footer-col">
-        <h3>Quick Links</h3>
-        <p><a href="#highlights">Project Highlights</a></p>
-        <p><a href="#location">Location</a></p>
-        <p><a href="#video">Videos</a></p>
-        <p><a href="#contact">Book Visit</a></p>
-    </div>
-  
-
-    <!-- Column 4 -->
-    <div class="footer-col">
-        <h3>Connect With Us</h3>
-        <p><a href="tel:9553142914">Call Now</a></p>
-        <p><a href="https://wa.me/919553142914" target="_blank">WhatsApp</a></p>
-        <p><a href="#">Instagram</a></p>
-        <p><a href="#">Facebook</a></p>
-        <p><a href="#">YouTube</a></p>
-    </div>
-   
-
-</div>
-
-<div class="footer-bottom">
-<p>© 2026 Alekya Brundavan @ Kadthal | All Rights Reserved.</p>
-<p style="font-size:12px; opacity:0.7;">
-This website is maintained by the Authorized Marketing Partner for promotional purposes only.
+<p>
+<a href="#">Instagram</a> |
+<a href="#">Facebook</a>
 </p>
-</div>
+
+<p style="margin-top:20px;font-size:12px;opacity:0.6;">
+© 2026 Alekya Brundavan | Promotional Website
+</p>
 
 </footer>
 
 <a class="whatsapp-float" href="https://wa.me/919553142914">WA</a>
 
-<script>
-let heroSlides=document.querySelectorAll('.hero-slide');
-let heroIndex=0;
-setInterval(()=>{
-heroSlides[heroIndex].classList.remove('active');
-heroIndex=(heroIndex+1)%heroSlides.length;
-heroSlides[heroIndex].classList.add('active');
-},5000);
-</script>
-
 </body>
 </html>
-
