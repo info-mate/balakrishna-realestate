@@ -84,25 +84,22 @@ background:#1ebe5d;
 font-size:16px;
 }
 
-/* HERO */
-header{position:relative;height:100vh;overflow:hidden;}
-.hero-slider,.hero-slide{position:absolute;width:100%;height:100%;}
-.hero-slide{object-fit:cover;opacity:0;transition:1s;transform:scale(1.08);}
-.hero-slide.active{opacity:1;transform:scale(1);}
-.hero-overlay{position:absolute;width:100%;height:100%;background:rgba(0,0,0,0.6);}
-.hero-content{
-position:relative;z-index:2;height:100%;
-display:flex;flex-direction:column;justify-content:center;
-align-items:center;text-align:center;padding:20px;
+/* HERO FIXED BACKGROUND */
+header{
+position:relative;
+height:100vh;
+overflow:hidden;
 }
-.hero-content h1{font-size:55px;}
-.hero-buttons{margin-top:30px;}
-.btn{
-display:inline-block;padding:14px 28px;margin:10px;
-background:#1e3a8a;color:white;text-decoration:none;
-border-radius:6px;transition:0.3s;
+
+.hero-fixed{
+position:absolute;
+width:100%;
+height:100%;
+background:
+linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+url('images/hero-bg.jpg') center/cover no-repeat;
+background-attachment:fixed;
 }
-.btn:hover{background:#162c6b;}
 
   /* GALLERY */
 .gallery-grid{
@@ -535,6 +532,7 @@ heroSlides[heroIndex].classList.add('active');
 
 </body>
 </html>
+
 
 
 
