@@ -7,7 +7,36 @@
 <title>Alekya Brundavan @ Kadthal | Open Plots</title>
 
 <style>
+.overview-grid {
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
 
+.overview-card {
+background:white;
+color:#1a1a1a;
+padding:30px;
+border-radius:15px;
+box-shadow:0 12px 30px rgba(0,0,0,0.3);
+text-align:center;
+transition:0.3s;
+}
+
+.overview-card:hover {
+transform:translateY(-6px);
+}
+
+.overview-card h3 {
+margin-bottom:10px;
+font-size:18px;
+color:#1e3a8a;
+}
+
+.overview-card p {
+font-size:17px;
+font-weight:600;
+}
 /* GENERAL */
 body{
 margin:0;
@@ -268,6 +297,7 @@ bottom:auto;
 <h3>Kadthal – Phase I–V</h3>
 <h3>Location:Kadthal,Srisailam Highway</h3>
 <p>DTCP Approved Layout | FCDA FuterCity Included | RERA No: PO2400009081</p>
+    <p>Plot size:147 - 352 Sq.Yards | 280 acres Mega Township | Available at Attractive & Low Investment Price </p>
 <div class="hero-buttons">
 <a class="btn green-call" href="tel:9553142914">
 <i class="fas fa-phone"></i> Call Now
@@ -292,6 +322,30 @@ bottom:auto;
 </div>
 </section>
 
+<section class="section">
+<h2>Project Overview</h2>
+
+<div class="overview-grid">
+
+<div class="overview-card">
+<h3>Plot Sizes</h3>
+<p>147 – 352 Sq. Yards</p>
+</div>
+
+<div class="overview-card">
+<h3>Total Project Area</h3>
+<p>280 Acres Mega Township</p>
+</div>
+
+<div class="overview-card">
+<h3>Pricing</h3>
+<p>Available at Attractive & Low Investment Price</p>
+</div>
+
+
+
+</div>
+</section>
 <section class="section" id="location">
 <h2>Location Highlights</h2>
 
@@ -351,19 +405,18 @@ bottom:auto;
 <section class="section">
 <h2>Book a Site Visit</h2>
 
-<form action="https://docs.google.com/forms/d/e/1FAIpQLSf8RaOrheq1mizeqg1YuA-m20bWoi14L7GtQnDxhC1KSq8_NA/formResponse"
-method="POST">
-method="POST"
-target="hidden_iframe"
-onsubmit="showSuccess()">
+<form action="https://formsubmit.co/sk88875@gmail.com" method="POST">
 
-<input type="text" name="entry.1155320023" placeholder="Your Name" required>
+<input type="text" name="Name" placeholder="Your Name" required>
+<input type="tel" name="Phone" placeholder="Phone Number" required>
+<input type="text" name="Location" placeholder="Your Location" required>
 
-<input type="tel" name="entry.1521801240" placeholder="Phone Number" required>
+<!-- Disable captcha -->
+<input type="hidden" name="_captcha" value="false">
 
-<input type="text" name="entry.675423022" placeholder="Your Location" required>
+<!-- Redirect after submit -->
+<input type="hidden" name="_next" value="https://info-mate.github.io/balakrishna-realestate/">
 
-<button type="submit">Submit</button>
 <button type="submit" class="btn">Submit</button>
 
 </form>
@@ -424,4 +477,29 @@ heroSlides[heroIndex].classList.add('active');
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
