@@ -530,11 +530,11 @@ bottom:auto;
 
 <form id="leadForm">
 
-<input type="text" id="name" placeholder="Your Name" required>
+<input type="text" name="name" id="name" placeholder="Your Name" required>
 
-<input type="tel" id="phone" placeholder="Phone Number" required>
+<input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
 
-<input type="text" id="location" placeholder="Your Location" required>
+<input type="text" name="location" id="location" placeholder="Your Location" required>
 
 <button type="submit" class="btn">Submit</button>
 
@@ -607,29 +607,32 @@ const firebaseConfig = {
   projectId: "balakrishna-realestate",
   storageBucket: "balakrishna-realestate.firebasestorage.app",
   messagingSenderId: "126760489279",
-  appId: "1:126760489279:web:f9ba9cbb033edbfb67c38a",
-  measurementId: "G-76V8BB570N"
+  appId: "1:126760489279:web:f9ba9cbb033edbfb67c38a"
 };
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-document.getElementById("leadForm").addEventListener("submit", async (e)=>{
+const form = document.getElementById("leadForm");
+
+form.addEventListener("submit", async (e) => {
 
 e.preventDefault();
 
-const name = document.getElementById("name").value;
-const phone = document.getElementById("phone").value;
-const locationField = document.getElementById("location");
-const location = locationField ? locationField.value : "";
+const name = form.name.value;
+const phone = form.phone.value;
+const location = form.location.value;
+
 await addDoc(collection(db,"leads"),{
-name:name,
-phone:phone,
-location:location,
+name,
+phone,
+location,
 time:new Date()
 });
 
 document.getElementById("success-msg").style.display="block";
+
+form.reset();
 
 });
 
@@ -637,5 +640,6 @@ document.getElementById("success-msg").style.display="block";
 </body>
    
 </html>
+
 
 
