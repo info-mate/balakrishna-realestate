@@ -44,13 +44,15 @@ cursor:pointer;
 </head>
 
 <body>
-<script>
-const password = prompt("Enter Admin Password");
+  <script id="n3p6um">
+let pass = prompt("Enter Admin Password");
 
-if(password !== "admin123"){
-document.body.innerHTML = "Access Denied";
+if(pass !== "admin123"){
+alert("Access Denied");
+window.location.href = "index.html";
 }
 </script>
+
 <h2>Customer Leads</h2>
 
 <button onclick="downloadCSV()">Download Leads</button>
