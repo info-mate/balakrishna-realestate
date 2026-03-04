@@ -4,6 +4,7 @@
 <title>Leads Dashboard</title>
 
 <style>
+
 body{
 font-family:Arial;
 background:#0f1f3d;
@@ -28,17 +29,28 @@ background:#1e3a8a;
 color:white;
 }
 
-h2{
+button{
+padding:10px 18px;
 margin-bottom:20px;
+background:#1e3a8a;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
 }
+
 </style>
+
 </head>
 
 <body>
 
 <h2>Customer Leads</h2>
 
+<button onclick="downloadCSV()">Download Leads</button>
+
 <table>
+
 <thead>
 <tr>
 <th>Name</th>
@@ -49,6 +61,7 @@ margin-bottom:20px;
 </thead>
 
 <tbody id="leadTable"></tbody>
+
 </table>
 
 <script type="module">
@@ -76,14 +89,14 @@ const querySnapshot = await getDocs(collection(db,"leads"));
 
 querySnapshot.forEach((doc)=>{
 
-const data = doc.data();
+const d = doc.data();
 
 const row = `
 <tr>
-<td>${data.name}</td>
-<td>${data.phone}</td>
-<td>${data.location}</td>
-<td>${new Date(data.time.seconds*1000).toLocaleString()}</td>
+<td>${d.name}</td>
+<td>${d.phone}</td>
+<td>${d.location}</td>
+<td>${new Date(d.time.seconds*1000).toLocaleString()}</td>
 </tr>
 `;
 
@@ -94,6 +107,40 @@ table.innerHTML += row;
 }
 
 loadLeads();
+
+</script>
+
+<script>
+
+function downloadCSV(){
+
+let rows=document.querySelectorAll("table tr");
+
+let csv=[];
+
+rows.forEach(row=>{
+
+let cols=row.querySelectorAll("td,th");
+
+let data=[];
+
+cols.forEach(col=>data.push(col.innerText));
+
+csv.push(data.join(","));
+
+});
+
+let blob=new Blob([csv.join("\n")],{type:"text/csv"});
+
+let link=document.createElement("a");
+
+link.href=URL.createObjectURL(blob);
+
+link.download="leads.csv";
+
+link.click();
+
+}
 
 </script>
 
