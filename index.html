@@ -619,6 +619,8 @@ form.addEventListener("submit", async (e) => {
 
 e.preventDefault();
 
+try {
+
 const name = form.name.value;
 const phone = form.phone.value;
 const location = form.location.value;
@@ -631,8 +633,12 @@ time:new Date()
 });
 
 document.getElementById("success-msg").style.display="block";
-
 form.reset();
+
+} catch (error) {
+console.error("Error saving lead:", error);
+alert("Something went wrong. Please try again.");
+}
 
 });
 
@@ -640,6 +646,7 @@ form.reset();
 </body>
    
 </html>
+
 
 
 
