@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Leads Dashboard</title>
+
+<style>
+body{
+font-family:Arial;
+background:#0f1f3d;
+color:white;
+padding:40px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+color:black;
+}
+
+th,td{
+padding:12px;
+border:1px solid #ddd;
+}
+
+th{
+background:#1e3a8a;
+color:white;
+}
+
+h2{
+margin-bottom:20px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Customer Leads</h2>
+
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Phone</th>
+<th>Location</th>
+<th>Date</th>
+</tr>
+</thead>
+
+<tbody id="leadTable"></tbody>
+</table>
+
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
+
+const firebaseConfig = {
+apiKey: "AIzaSyDhUTnoCW3_L5HQSVlUO6cxwpoAfW70X9o",
+authDomain: "balakrishna-realestate.firebaseapp.com",
+projectId: "balakrishna-realestate",
+storageBucket: "balakrishna-realestate.firebasestorage.app",
+messagingSenderId: "126760489279",
+appId: "1:126760489279:web:f9ba9cbb033edbfb67c38a"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+const table = document.getElementById("leadTable");
+
+async function loadLeads(){
+
+const querySnapshot = await getDocs(collection(db,"leads"));
+
+querySnapshot.forEach((doc)=>{
+
+const data = doc.data();
+
+const row = `
+<tr>
+<td>${data.name}</td>
+<td>${data.phone}</td>
+<td>${data.location}</td>
+<td>${new Date(data.time.seconds*1000).toLocaleString()}</td>
+</tr>
+`;
+
+table.innerHTML += row;
+
+});
+
+}
+
+loadLeads();
+
+</script>
+
+</body>
+</html>
