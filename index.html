@@ -528,35 +528,22 @@ bottom:auto;
 <section class="section">
 <h2>Book a Site Visit</h2>
 
-<form action="https://formsubmit.co/balakrishna3156@gmail.com" method="POST">
+<form id="leadForm">
 
-<input type="text" name="Name" placeholder="Your Name" required>
-<input type="tel" name="Phone" placeholder="Phone Number" required>
-<input type="text" name="Location" placeholder="Your Location" required>
+<input type="text" id="name" placeholder="Your Name" required>
 
-<!-- Disable captcha -->
-<input type="hidden" name="_captcha" value="false">
+<input type="tel" id="phone" placeholder="Phone Number" required>
 
-<!-- Redirect after submit -->
-<input type="hidden" name="_next" value="https://info-mate.github.io/balakrishna-realestate/">
+<input type="text" id="location" placeholder="Your Location" required>
 
 <button type="submit" class="btn">Submit</button>
 
 </form>
 
-<iframe name="hidden_iframe" style="display:none;"></iframe>
-
 <p id="success-msg" style="display:none;color:lightgreen;margin-top:10px;">
 ✔ Thank you! Our team will contact you shortly.
 </p>
 
-<script>
-function showSuccess(){
-setTimeout(function(){
-document.getElementById("success-msg").style.display="block";
-},1000);
-}
-</script>
 
 </section>
 
@@ -609,18 +596,45 @@ currentIndex = 0;
 track.style.transform = "translateX(-" + (currentIndex * 100) + "%)";
 }
 </script>
+<script type="module">
 
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDhUTnoCW3_L5HQSVlUO6cxwpoAfW70X9o",
+  authDomain: "balakrishna-realestate.firebaseapp.com",
+  projectId: "balakrishna-realestate",
+  storageBucket: "balakrishna-realestate.firebasestorage.app",
+  messagingSenderId: "126760489279",
+  appId: "1:126760489279:web:f9ba9cbb033edbfb67c38a",
+  measurementId: "G-76V8BB570N"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+document.getElementById("leadForm").addEventListener("submit", async (e)=>{
+
+e.preventDefault();
+
+const name = document.getElementById("name").value;
+const phone = document.getElementById("phone").value;
+const location = document.getElementById("location").value;
+
+await addDoc(collection(db,"leads"),{
+name:name,
+phone:phone,
+location:location,
+time:new Date()
+});
+
+document.getElementById("success-msg").style.display="block";
+
+});
+
+</script>
 </body>
+   
 </html>
-
-
-
-
-
-
-
-
-
-
-
 
