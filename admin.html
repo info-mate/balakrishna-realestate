@@ -108,7 +108,7 @@ const row = `
 </tr>
 `;
 
-table.innerHTML += row;
+table.innerHTML = row + table.innerHTML;
 
 });
 
@@ -126,6 +126,9 @@ let rows=document.querySelectorAll("table tr");
 
 let csv=[];
 
+/* Excel separator instruction */
+csv.push("sep=;");
+
 rows.forEach(row=>{
 
 let cols=row.querySelectorAll("td,th");
@@ -138,7 +141,7 @@ csv.push(data.join(";"));
 
 });
 
-let blob=new Blob([csv.join("\n")],{type:"text/csv"});
+let blob=new Blob([csv.join("\n")],{type:"text/csv;charset=utf-8;"});
 
 let link=document.createElement("a");
 
