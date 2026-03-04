@@ -44,7 +44,13 @@ cursor:pointer;
 </head>
 
 <body>
+<script>
+const password = prompt("Enter Admin Password");
 
+if(password !== "admin123"){
+document.body.innerHTML = "Access Denied";
+}
+</script>
 <h2>Customer Leads</h2>
 
 <button onclick="downloadCSV()">Download Leads</button>
