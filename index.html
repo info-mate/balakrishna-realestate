@@ -620,8 +620,8 @@ e.preventDefault();
 
 const name = document.getElementById("name").value;
 const phone = document.getElementById("phone").value;
-const location = document.getElementById("location").value;
-
+const locationField = document.getElementById("location");
+const location = locationField ? locationField.value : "";
 await addDoc(collection(db,"leads"),{
 name:name,
 phone:phone,
@@ -637,4 +637,5 @@ document.getElementById("success-msg").style.display="block";
 </body>
    
 </html>
+
 
