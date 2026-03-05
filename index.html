@@ -5,7 +5,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alekya Brundavan @ Kadthal | Open Plots</title>
+<!-- Open Graph for WhatsApp / Facebook preview -->
 
+<meta property="og:title" content="Alekya Brundavan Phase I–V | DTCP Approved Plots">
+
+<meta property="og:description" content="DTCP Approved Open Plots at Kadthal – Srisailam Highway. 280 Acres Mega Township. Plot Sizes 147–352 Sq.Yards.">
+
+<meta property="og:image" content="https://info-mate.github.io/balakrishna-realestate/preview.jpg">
+
+<meta property="og:url" content="https://info-mate.github.io/balakrishna-realestate/">
+
+<meta property="og:type" content="website">
+   <meta name="twitter:card" content="summary_large_image">
+
+<meta name="twitter:title" content="Alekya Brundavan Phase I–V">
+
+<meta name="twitter:description" content="DTCP Approved Plots at Kadthal – Srisailam Highway. 280 Acres Mega Township.">
+
+<meta name="twitter:image" content="https://info-mate.github.io/balakrishna-realestate/preview.jpg">
 <style>
    .hero-location{
 font-size:26px;
@@ -435,6 +452,44 @@ background:#15803d;
 font-size:18px;
 margin-top:10px;
 }
+   .overview-text{
+max-width:700px;
+margin:auto;
+text-align:left;
+}
+
+.overview-list{
+list-style:disc;
+padding-left:25px;
+font-size:18px;
+line-height:1.8;
+}
+
+.overview-list li{
+margin:6px 0;
+}
+
+.fcda{
+color:#facc15;
+font-weight:700;
+}
+   #shareBtn{
+position:fixed;
+bottom:90px;
+right:20px;
+z-index:999;
+}
+
+#shareBtn button{
+background:#1e3a8a;
+color:white;
+border:none;
+padding:12px 16px;
+border-radius:25px;
+font-size:16px;
+cursor:pointer;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
 </style>
 
  
@@ -511,12 +566,29 @@ Plot Size: <strong>147 – 352 Sq.Yards</strong> |
 
 <section class="section">
 <h2>Project Overview</h2>
-<div class="overview-card">
-    <p>DTCP Approved Layout</p><p>FCDA Future City Included</p>
-   <p>40' & 33' BT Roads</p><p>Underground Drainage</p>
-   <p>24 Hours Security</p><p>Jogging Track & Parks</p>
-   <p>Plot Sizes: 147 – 352 Sq. Yards</p><p>280 Acres Mega Township</p>
-<p>Available at Attractive & Low Investment Price</p>
+<div class="overview-text">
+
+<ul class="overview-list">
+
+<li>DTCP Approved Layout</li>
+
+<li class="fcda">FCDA Future City Included</li>
+
+<li>40' & 33' BT Roads</li>
+
+<li>Underground Drainage System</li>
+
+<li>24 Hours Security</li>
+
+<li>Jogging Track & Parks</li>
+
+<li>Plot Sizes: <strong>147 – 352 Sq. Yards</strong></li>
+
+<li><strong>280 Acres</strong> Mega Township</li>
+
+<li>Available at Attractive Investment Price</li>
+
+</ul>
 
 </div>
 </section>
@@ -695,7 +767,29 @@ alert("Something went wrong. Please try again.");
 });
 
 </script>
+   <div id="shareBtn">
+<button onclick="shareSite()">🔗 Share</button>
+</div>
+   <script>
+function shareSite(){
+
+const shareData = {
+title: "Alekya Brundavan Open Plots",
+text: "Check this DTCP Approved Plot Project at Kadthal, Srisailam Highway",
+url: window.location.href
+};
+
+if(navigator.share){
+navigator.share(shareData);
+}else{
+navigator.clipboard.writeText(window.location.href);
+alert("Link copied! You can paste and share it.");
+}
+
+}
+</script>
 </body>
    
 </html>
+
 
