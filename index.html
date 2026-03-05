@@ -473,22 +473,28 @@ margin:6px 0;
 color:#facc15;
 font-weight:700;
 }
-   #shareBtn{
-position:fixed;
-bottom:90px;
-right:20px;
-z-index:999;
+  
+   .social-share{
+display:flex;
+gap:15px;
+align-items:center;
+justify-content:center;
+margin-top:15px;
 }
 
-#shareBtn button{
+.social-share a{
+font-size:22px;
+color:white;
+}
+
+.share-btn{
 background:#1e3a8a;
 color:white;
 border:none;
-padding:12px 16px;
-border-radius:25px;
-font-size:16px;
+padding:8px 14px;
+border-radius:6px;
 cursor:pointer;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
+font-size:14px;
 }
 </style>
 
@@ -689,7 +695,17 @@ Plot Size: <strong>147 – 352 Sq.Yards</strong> |
 <a href="https://www.facebook.com/share/17KURxw2w9/" target="_blank" class="fb-icon">
 <i class="fab fa-facebook-f"></i>
 </a>
+<div class="social-share">
 
+<a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+
+<a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+
+<button class="share-btn" onclick="shareSite()">
+<i class="fas fa-share-alt"></i> Share
+</button>
+
+</div>
 </div>
 <p style="font-size:12px;opacity:0.7;">
 This website is maintained by the Authorized Marketing Manager for promotional purposes only.
@@ -767,15 +783,13 @@ alert("Something went wrong. Please try again.");
 });
 
 </script>
-   <div id="shareBtn">
-<button onclick="shareSite()">🔗 Share</button>
-</div>
-   <script>
+  
+ <script>
 function shareSite(){
 
 const shareData = {
-title: "Alekya Brundavan Open Plots",
-text: "Check this DTCP Approved Plot Project at Kadthal, Srisailam Highway",
+title: "Alekya Brundavan Phase I–V",
+text: "DTCP Approved Plots at Kadthal – Srisailam Highway",
 url: window.location.href
 };
 
@@ -783,7 +797,7 @@ if(navigator.share){
 navigator.share(shareData);
 }else{
 navigator.clipboard.writeText(window.location.href);
-alert("Link copied! You can paste and share it.");
+alert("Website link copied. You can paste and share.");
 }
 
 }
@@ -791,5 +805,6 @@ alert("Link copied! You can paste and share it.");
 </body>
    
 </html>
+
 
 
