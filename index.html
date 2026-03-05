@@ -391,8 +391,50 @@ margin:30px auto;
 left:auto;
 bottom:auto;
 }
+
+.hero-title{
+font-size:48px;
+margin-bottom:15px;
+font-weight:700;
 }
 
+.location-badge{
+display:inline-block;
+background:#1e3a8a;
+padding:8px 16px;
+border-radius:25px;
+font-size:18px;
+margin-bottom:15px;
+font-weight:600;
+}
+
+.hero-features{
+margin:15px 0;
+}
+
+.badge{
+display:inline-block;
+background:#1f2937;
+padding:6px 12px;
+border-radius:6px;
+margin:4px;
+font-size:14px;
+}
+
+.badge.fcda{
+background:#facc15;
+color:#000;
+font-weight:700;
+}
+
+.badge.rera{
+background:#15803d;
+}
+
+.hero-info{
+font-size:18px;
+margin-top:10px;
+}
 </style>
 
  
@@ -411,16 +453,21 @@ bottom:auto;
 <div class="hero-fixed"></div>
 
 <div class="hero-content">
-<h1>Alekya Brundavan Phase I–V</h1>
+<h1 class="hero-title">Alekya Brundavan Phase I–V</h1>
 
-<h3 class="hero-location">
-Location: Kadthal, Srisailam Highway
-</h3>
+<div class="location-badge">
+📍 Kadthal – Srisailam Highway
+</div>
 
 <p class="hero-features">
-DTCP Approved Layout |
-<span class="fcda-highlight">FCDA Future City Included</span> |
-RERA No: PO2400009081
+<span class="badge">DTCP Approved Layout</span>
+<span class="badge fcda">FCDA Future City Zone</span>
+<span class="badge rera">RERA: PO2400009081</span>
+</p>
+
+<p class="hero-info">
+Plot Size: <strong>147 – 352 Sq.Yards</strong> | 
+<strong>280 Acres</strong> Mega Township
 </p>
 <p>Plot size:147 - 352 Sq.Yards | 280 acres Mega Township | Available at Attractive & Low Investment Price </p>
 <div class="hero-buttons">
@@ -651,15 +698,3 @@ alert("Something went wrong. Please try again.");
 </body>
    
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
